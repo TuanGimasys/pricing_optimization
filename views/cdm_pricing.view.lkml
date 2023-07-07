@@ -1,6 +1,6 @@
 view: cdm_pricing {
   label: "Pricing Optimization"
-  sql_table_name: [Pricing_CDM.CDM_Pricing] ;;
+  sql_table_name: `gms-rd-smartanalytics.Pricing_CDM.CDM_Pricing` ;;
 
    dimension: cash_discounts_and_other_sales_deductions {
 
