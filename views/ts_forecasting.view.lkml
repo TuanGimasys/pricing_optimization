@@ -25,7 +25,7 @@ view: bqml_arima {
 view: forecasting {
   view_label: "Quantity Sold Forecasting"
   derived_table: {
-    sql: SELECT * FROM ML.FORECAST(MODEL Pricing_CDM.bqml_arima,
+    sql: SELECT * FROM ML.FORECAST(MODEL `gms-rd-smartanalytics.Pricing_CDM.bqml_arima`,
       STRUCT(30 AS horizon, 0.8 AS confidence_level)) ;;
   }
 
