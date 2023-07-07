@@ -1,4 +1,4 @@
-connection: "pricing_cdm_standard"
+connection: "pricing_cdm"
 
 # include all the dashboards
 include: "/dashboards/*.dashboard.lookml"
