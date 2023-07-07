@@ -2,7 +2,7 @@ view: bqml_arima {
   derived_table: {
     persist_for: "24 hours"
     sql_create:
-      CREATE OR REPLACE MODEL `gms-rd-smartanalytics2.Pricing_CDM_2.bqml_arima`
+      CREATE OR REPLACE MODEL `gms-rd-smartanalytics.Pricing_CDM.bqml_arima`
             OPTIONS
               (model_type = 'ARIMA_PLUS',
                time_series_timestamp_col = 'fiscal_date',
@@ -25,7 +25,7 @@ view: bqml_arima {
 view: forecasting {
   view_label: "Quantity Sold Forecasting"
   derived_table: {
-    sql: SELECT * FROM ML.FORECAST(MODEL Pricing_CDM_2.bqml_arima,
+    sql: SELECT * FROM ML.FORECAST(MODEL Pricing_CDM.bqml_arima,
       STRUCT(30 AS horizon, 0.8 AS confidence_level)) ;;
   }
 
