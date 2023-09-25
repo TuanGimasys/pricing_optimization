@@ -862,14 +862,6 @@
     ui_config:
       type: button_toggles
       display: inline
-      options:
-      - ".5"
-      - ".75"
-      - '1'
-      - '1.25'
-      - '1.5'
-      - '1.75'
-      - '2'
     model: pricing_optimization
     explore: forecasting
     listens_to_filters: []

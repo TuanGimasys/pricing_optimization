@@ -241,4 +241,15 @@ view: cdm_pricing {
     value_format_name: usd
     sql: ${total_costs}/nullif(${total_invoiced_quantity_in_pieces},0) ;;
   }
+
+  measure: test2 {
+    type: number
+    sql: if(${total_gross_margin}>0, ${total_gross_sales}, 0);;
+  }
+
+  dimension: test {
+    type: tier
+    tiers: [0,1,2,5,10]
+    sql: ${list_price_converged} ;;
+  }
 }
