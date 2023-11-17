@@ -42,6 +42,11 @@ view: cdm_pricing {
     sql: ${TABLE}.Division ;;
   }
 
+  dimension: division_v2 {
+    type: number
+    sql: ${TABLE}.Division ;;
+  }
+
   dimension_group: fiscal {
     type: time
     timeframes: [
@@ -235,6 +240,8 @@ view: cdm_pricing {
     type: number
     value_format_name: percent_1
     sql: 1.0*(${total_net_sales})/nullif(${total_gross_sales},0) ;;
+    html:
+    <span style="font-size:50%">{{ rendered_value }}</span>;;
   }
 
   measure: total_cost_by_unit {
