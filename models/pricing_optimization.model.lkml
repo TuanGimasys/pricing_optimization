@@ -1,7 +1,7 @@
 connection: "pricing_cdm"
 
 # include all the dashboards
-include: "/dashboards/*.dashboard.lookml"
+# include: "/dashboards/*.dashboard.lookml"
 # include all the views
 include: "/views/**/*.view.lkml"
 
