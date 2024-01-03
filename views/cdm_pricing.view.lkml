@@ -27,8 +27,8 @@ view: cdm_pricing {
       label: "Label to Appear in Action Menu"
       url: "https://us-central1-gms-rd-smartanalytics.cloudfunctions.net/looker2"
       param: {
-        name: "name string"
-        value: "value string"
+        name: "parameter1"
+        value: "1"
       }
     }
   }
