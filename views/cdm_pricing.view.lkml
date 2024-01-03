@@ -23,6 +23,27 @@ view: cdm_pricing {
     group_label: "Customer"
     type: number
     sql: ${TABLE}.Customer_code ;;
+    action: {
+      label: "Cool Name?"
+      url: "https://us-central1-gms-rd-smartanalytics.cloudfunctions.net/looker"
+      param: {
+        name: "name"
+        value: "{{ value }}"
+      }
+      form_param: {
+        name: "annotation"
+        type: select
+        label: "Cool name?"
+        default: "No"
+        description: "Do you think that this name is a cool name?"
+        option: {
+          name: "No"
+        }
+        option: {
+          name: "Yes"
+        }
+      }
+    }
   }
 
   dimension: customer_hierarchy {
