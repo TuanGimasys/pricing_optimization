@@ -24,24 +24,11 @@ view: cdm_pricing {
     type: number
     sql: ${TABLE}.Customer_code ;;
     action: {
-      label: "Cool Name?"
-      url: "https://us-central1-gms-rd-smartanalytics.cloudfunctions.net/looker"
+      label: "Label to Appear in Action Menu"
+      url: "https://us-central1-gms-rd-smartanalytics.cloudfunctions.net/looker2"
       param: {
-        name: "name"
-        value: "{{ value }}"
-      }
-      form_param: {
-        name: "annotation"
-        type: select
-        label: "Cool name?"
-        default: "No"
-        description: "Do you think that this name is a cool name?"
-        option: {
-          name: "No"
-        }
-        option: {
-          name: "Yes"
-        }
+        name: "name string"
+        value: "value string"
       }
     }
   }
